@@ -92,11 +92,10 @@
     <!-- ==================== 1. HERO (foto a sangre + título serif itálica + pills azules) ==================== -->
     <section id="hero" class="relative">
       <div class="relative h-[600px] md:h-[720px] lg:h-[820px] overflow-hidden bg-[#1a1209]">
-        <!-- TODO: Sustituye por tu foto real. Arrástrala a /assets/img/hero-recepcion.jpg -->
-        <img src="assets/img/hero-recepcion.jpg"
-             onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2400&q=80';"
+        <img src="assets/img/hero-recepcion.png"
              alt="Recepcionista de hotel atendiendo a clientes en el mostrador"
-             class="absolute inset-0 w-full h-full object-cover" />
+             class="absolute inset-0 w-full h-full object-cover"
+             fetchpriority="high" />
 
         <!-- Degradado para legibilidad del texto en la parte inferior izquierda -->
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40"></div>
