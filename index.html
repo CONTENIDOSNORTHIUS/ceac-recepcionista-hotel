@@ -235,11 +235,14 @@
           </ul>
         </div>
 
-        <!-- 3 tarjetas azules con foto + dirección -->
+        <!-- 3 tarjetas azules con vídeo + dirección (vídeo se reproduce al hover) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 reveal">
-          <article class="bg-ceac-blue rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-            <!-- TODO: Sustituir por foto real del Instituto CEAC Madrid -->
-            <img src="https://placehold.co/600x400/0017EC/FFFFFF?text=Instituto+Madrid" alt="Edificio Instituto CEAC Madrid" class="w-full aspect-[5/3] object-cover" />
+          <article class="instituto-card bg-ceac-blue rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+            <div class="aspect-[5/3] overflow-hidden bg-ceac-blueDark">
+              <video class="instituto-video w-full h-full object-cover" muted loop playsinline preload="metadata" poster="" aria-label="Vídeo del Instituto CEAC Madrid">
+                <source src="assets/videos/madrid.webm" type="video/webm" />
+              </video>
+            </div>
             <div class="px-5 pt-4 pb-5">
               <p class="font-display italic text-2xl md:text-3xl text-white leading-tight">Madrid</p>
               <p class="text-white/85 text-xs md:text-sm mt-2 leading-snug">Pl. Cisneros, nº 1, 28037</p>
@@ -247,9 +250,12 @@
             </div>
           </article>
 
-          <article class="bg-ceac-blue rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-            <!-- TODO: Sustituir por foto real del Instituto CEAC Barcelona -->
-            <img src="https://placehold.co/600x400/0017EC/FFFFFF?text=Instituto+Barcelona" alt="Edificio Instituto CEAC Barcelona" class="w-full aspect-[5/3] object-cover" />
+          <article class="instituto-card bg-ceac-blue rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+            <div class="aspect-[5/3] overflow-hidden bg-ceac-blueDark">
+              <video class="instituto-video w-full h-full object-cover" muted loop playsinline preload="metadata" poster="" aria-label="Vídeo del Instituto CEAC Barcelona">
+                <source src="assets/videos/barcelona.webm" type="video/webm" />
+              </video>
+            </div>
             <div class="px-5 pt-4 pb-5">
               <p class="font-display italic text-2xl md:text-3xl text-white leading-tight">Barcelona</p>
               <p class="text-white/85 text-xs md:text-sm mt-2 leading-snug">C. de Salvador Espriu, 33, 08908 L'Hospitalet de Llobregat</p>
@@ -257,9 +263,12 @@
             </div>
           </article>
 
-          <article class="bg-ceac-blue rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-            <!-- TODO: Sustituir por foto real del Instituto CEAC Valencia -->
-            <img src="https://placehold.co/600x400/0017EC/FFFFFF?text=Instituto+Valencia" alt="Edificio Instituto CEAC Valencia" class="w-full aspect-[5/3] object-cover" />
+          <article class="instituto-card bg-ceac-blue rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+            <div class="aspect-[5/3] overflow-hidden bg-ceac-blueDark">
+              <video class="instituto-video w-full h-full object-cover" muted loop playsinline preload="metadata" poster="" aria-label="Vídeo del Instituto CEAC Valencia">
+                <source src="assets/videos/valencia.webm" type="video/webm" />
+              </video>
+            </div>
             <div class="px-5 pt-4 pb-5">
               <p class="font-display italic text-2xl md:text-3xl text-white leading-tight">Valencia</p>
               <p class="text-white/85 text-xs md:text-sm mt-2 leading-snug">Avenida de la Ilustración, 4, 46100 Burjasot</p>

@@ -60,7 +60,38 @@
     revealEls.forEach(el => el.classList.add('is-visible'));
   }
 
-  /* ---------- 4. Nav: transparente sobre hero → blanco al hacer scroll ---------- */
+  /* ---------- 4. Vídeos de los institutos: play en hover (desktop) + visible (móvil) ---------- */
+  const institutoCards = document.querySelectorAll('.instituto-card');
+  if (institutoCards.length) {
+    const isTouch = window.matchMedia('(hover: none)').matches;
+
+    institutoCards.forEach(card => {
+      const video = card.querySelector('.instituto-video');
+      if (!video) return;
+
+      const play = () => video.play().catch(() => {});
+      const pause = () => { video.pause(); video.currentTime = 0; };
+
+      if (isTouch) {
+        // En móvil: reproducir cuando entra en viewport, pausar cuando sale
+        if ('IntersectionObserver' in window) {
+          const vio = new IntersectionObserver(entries => {
+            entries.forEach(e => (e.isIntersecting ? play() : pause()));
+          }, { threshold: 0.5 });
+          vio.observe(card);
+        } else {
+          play();
+        }
+      } else {
+        card.addEventListener('mouseenter', play);
+        card.addEventListener('mouseleave', pause);
+        card.addEventListener('focusin', play);
+        card.addEventListener('focusout', pause);
+      }
+    });
+  }
+
+  /* ---------- 5. Nav: transparente sobre hero → blanco al hacer scroll ---------- */
   const nav = document.getElementById('nav');
   const navLogo = document.getElementById('navLogo');
   const navLinks = document.getElementById('navLinks');
