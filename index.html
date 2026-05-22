@@ -949,9 +949,13 @@
     </section>
 
     <!-- ==================== METODOLOGÍA CEAC ==================== -->
-    <!-- El fondo de la sección está partido: lavanda arriba + blanco abajo, alineado con el corte interno de la imagen -->
-    <section id="metodologia" class="py-0 bg-[linear-gradient(to_bottom,#E8EEF7_0%,#E8EEF7_62%,#FFFFFF_62%,#FFFFFF_100%)]">
-      <div class="max-w-6xl mx-auto px-4 lg:px-8 pt-12 md:pt-16 pb-12 md:pb-16">
+    <!-- Fondo bicolor: el div lavanda mide en altura el mismo % que la zona lavanda DENTRO de la imagen,
+         así el corte queda perfectamente alineado independientemente del ancho del viewport. -->
+    <section id="metodologia" class="bg-white relative overflow-hidden">
+      <!-- Backdrop lavanda detrás de la imagen: ocupa el 60% superior (alineado con la zona lavanda interna de la imagen) -->
+      <div class="absolute inset-x-0 top-0 h-[60%] bg-ceac-skyBg" aria-hidden="true"></div>
+
+      <div class="relative max-w-6xl mx-auto px-4 lg:px-8 pt-12 md:pt-16 pb-8 md:pb-12">
         <h2 class="sr-only">Metodología CEAC — El camino que recorrerás como alumno</h2>
         <div class="reveal">
           <img src="assets/img/metodologia-ceac.png"
