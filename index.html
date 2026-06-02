@@ -1244,23 +1244,26 @@
           </p>
         </div>
 
-        <!-- Carrusel marquee infinito de logos colaboradores -->
-        <div class="logos-marquee reveal" aria-label="Empresas colaboradoras">
-          <div class="logos-track">
-            <!-- Set 1 (visible) -->
-            <div class="logo-card"><img src="https://logo.clearbit.com/sercotelhotels.com" onerror="this.onerror=null; this.src='https://placehold.co/220x90/E5E5FA/0017EC?text=Sercotel+Hotels';" alt="Sercotel Hotels" /></div>
-            <div class="logo-card"><img src="assets/logos/ilunion.png" alt="Ilunion Hotels" /></div>
-            <div class="logo-card"><img src="assets/logos/mamarosa.png" alt="Mamarosa Beach" /></div>
-            <div class="logo-card"><img src="assets/logos/golden.png" alt="Hotel Golden" /></div>
-            <div class="logo-card"><img src="assets/logos/quinta-san-amaro.png" alt="Quinta de San Amaro Hotel y Restaurante" /></div>
-            <div class="logo-card"><img src="assets/logos/altafullamar.png" alt="Altafulla Mar Hotel" /></div>
-            <!-- Set 2 (duplicado para loop infinito sin saltos), aria-hidden para no duplicar para lectores de pantalla -->
-            <div class="logo-card" aria-hidden="true"><img src="https://logo.clearbit.com/sercotelhotels.com" onerror="this.onerror=null; this.src='https://placehold.co/220x90/E5E5FA/0017EC?text=Sercotel+Hotels';" alt="" /></div>
-            <div class="logo-card" aria-hidden="true"><img src="assets/logos/ilunion.png" alt="" /></div>
-            <div class="logo-card" aria-hidden="true"><img src="assets/logos/mamarosa.png" alt="" /></div>
-            <div class="logo-card" aria-hidden="true"><img src="assets/logos/golden.png" alt="" /></div>
-            <div class="logo-card" aria-hidden="true"><img src="assets/logos/quinta-san-amaro.png" alt="" /></div>
-            <div class="logo-card" aria-hidden="true"><img src="assets/logos/altafullamar.png" alt="" /></div>
+        <!-- Carrusel horizontal de logos colaboradores con flechas -->
+        <div class="relative reveal">
+          <!-- Botón izquierda -->
+          <button type="button" id="logosPrev" aria-label="Logos anteriores"
+                  class="hidden md:flex absolute -left-3 lg:-left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md hover:bg-gray-50 items-center justify-center transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0017EC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <!-- Botón derecha -->
+          <button type="button" id="logosNext" aria-label="Logos siguientes"
+                  class="hidden md:flex absolute -right-3 lg:-right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md hover:bg-gray-50 items-center justify-center transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0017EC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+
+          <div id="logosTrack" class="logos-track-scroll flex gap-3 md:gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth">
+            <div class="logo-card snap-start"><img src="assets/logos/sercotel.png" alt="Sercotel Hotels" /></div>
+            <div class="logo-card snap-start"><img src="assets/logos/ilunion.png" alt="Ilunion Hotels" /></div>
+            <div class="logo-card snap-start"><img src="assets/logos/mamarosa.png" alt="Mamarosa Beach" /></div>
+            <div class="logo-card snap-start"><img src="assets/logos/golden.png" alt="Hotel Golden" /></div>
+            <div class="logo-card snap-start"><img src="assets/logos/quinta-san-amaro.png" alt="Quinta de San Amaro Hotel y Restaurante" /></div>
+            <div class="logo-card snap-start"><img src="assets/logos/altafullamar.png" alt="Altafulla Mar Hotel" /></div>
           </div>
         </div>
       </div>

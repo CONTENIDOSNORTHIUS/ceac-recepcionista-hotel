@@ -117,7 +117,29 @@
     });
   }
 
-  /* ---------- 6. Metodología CEAC: ocultar el hint de scroll tras el primer desplazamiento ---------- */
+  /* ---------- 6. Carrusel de logos colaboradores (flechas prev/next con loop) ---------- */
+  const logosTrack = document.getElementById('logosTrack');
+  const logosPrev  = document.getElementById('logosPrev');
+  const logosNext  = document.getElementById('logosNext');
+  if (logosTrack && logosPrev && logosNext) {
+    const step = () => {
+      const card = logosTrack.querySelector('.logo-card');
+      if (!card) return 240;
+      const gap = parseFloat(getComputedStyle(logosTrack).gap) || 16;
+      return card.offsetWidth + gap;
+    };
+    logosNext.addEventListener('click', () => {
+      const max = logosTrack.scrollWidth - logosTrack.clientWidth;
+      if (logosTrack.scrollLeft >= max - 4) logosTrack.scrollTo({ left: 0, behavior: 'smooth' });
+      else logosTrack.scrollBy({ left: step(), behavior: 'smooth' });
+    });
+    logosPrev.addEventListener('click', () => {
+      if (logosTrack.scrollLeft <= 4) logosTrack.scrollTo({ left: logosTrack.scrollWidth, behavior: 'smooth' });
+      else logosTrack.scrollBy({ left: -step(), behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 7. Metodología CEAC: ocultar el hint de scroll tras el primer desplazamiento ---------- */
   const metodologiaScroll = document.getElementById('metodologiaScroll');
   const metodologiaHint  = document.getElementById('metodologiaHint');
   if (metodologiaScroll && metodologiaHint) {

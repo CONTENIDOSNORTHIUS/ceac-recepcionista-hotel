@@ -27,20 +27,13 @@ html {
 /* Nav flota encima del hero; activamos sombra suave solo cuando es sólido */
 #nav.bg-white\/95 { box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
 
-/* ---------- Carrusel marquee de logos colaboradores ---------- */
-.logos-marquee {
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-          mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+/* ---------- Carrusel horizontal de logos colaboradores (scroll + flechas) ---------- */
+.logos-track-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
 }
-.logos-track {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  width: max-content;
-  animation: logosMarquee 35s linear infinite;
-}
-.logos-track:hover { animation-play-state: paused; }
+.logos-track-scroll::-webkit-scrollbar { display: none; }
 .logo-card {
   flex: 0 0 auto;
   width: 200px;
@@ -57,16 +50,7 @@ html {
   max-height: 100%;
   object-fit: contain;
 }
-@keyframes logosMarquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-/* Respeto a usuarios con motion reducido */
-@media (prefers-reduced-motion: reduce) {
-  .logos-track { animation: none; }
-}
 @media (min-width: 768px) {
-  .logos-track { gap: 1.25rem; }
   .logo-card { width: 240px; height: 130px; }
 }
 
