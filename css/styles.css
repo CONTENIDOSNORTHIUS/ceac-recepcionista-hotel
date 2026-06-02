@@ -34,24 +34,35 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 .logos-track-scroll::-webkit-scrollbar { display: none; }
+
 .logo-card {
   flex: 0 0 auto;
-  width: 200px;
+  width: 180px;
   height: 110px;
   background: #E5E5FA;
+  border: 1px solid rgba(0, 23, 236, 0.08);
   border-radius: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 1.25rem;
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;
 }
 .logo-card img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 70px;
+  width: auto;
+  height: auto;
   object-fit: contain;
+  display: block;
 }
 @media (min-width: 768px) {
-  .logo-card { width: 240px; height: 130px; }
+  .logo-card {
+    width: 220px;
+    height: 130px;
+    padding: 1rem 1.25rem;
+  }
+  .logo-card img { max-height: 85px; }
 }
 
 /* Pista del camino de la metodología — scrollbar fina y discreta en lavanda */
