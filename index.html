@@ -805,34 +805,45 @@
           <span class="italic">equipo docente</span>
         </h2>
 
-        <div class="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto">
-          <!-- Cora Rilo -->
-          <article class="bg-white rounded-2xl border border-gray-200 p-5 md:p-6 flex gap-4 md:gap-5 reveal">
-            <img src="assets/img/cora-rilo.png" alt="Cora Rilo" class="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover flex-shrink-0" />
-            <div>
-              <h3 class="font-display text-lg md:text-xl text-ceac-blue mb-2">Cora Rilo</h3>
-              <p class="text-[11px] md:text-xs text-gray-700 leading-relaxed">
-                Diplomada en Turismo y Licenciada en Traducción e Interpretación. Además, Rilo es
-                Técnico Superior en Desarrollo de Aplicaciones Web. En su currículum también destacan
-                un Máster de Profesorado y un Certificado de Profesionalidad de Habilitación Docente.
-                Igualmente cuenta con conocimientos en materia de igualdad de género, orientación
-                laboral, recursos humanos y facturación electrónica.
-              </p>
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
+
+          <!-- Vídeo del docente -->
+          <div class="reveal">
+            <div id="docenteVideoWrap" class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gray-300">
+              <button type="button" id="docenteVideo"
+                      data-yt="PeNn-hmNenU"
+                      class="group absolute inset-0 w-full h-full focus:outline-none focus:ring-4 focus:ring-ceac-blue/30"
+                      aria-label="Reproducir vídeo de presentación de Luis Romo">
+                <img src="https://i.ytimg.com/vi/PeNn-hmNenU/maxresdefault.jpg"
+                     onerror="this.onerror=null; this.src='https://i.ytimg.com/vi/PeNn-hmNenU/hqdefault.jpg';"
+                     alt="Miniatura del vídeo de Luis Romo"
+                     class="absolute inset-0 w-full h-full object-cover" />
+                <span class="absolute inset-0 flex items-center justify-center">
+                  <span class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/95 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="#0017EC" aria-hidden="true">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </span>
+                </span>
+              </button>
             </div>
+          </div>
+
+          <!-- Luis Romo -->
+          <article class="bg-white rounded-2xl border border-gray-200 p-5 md:p-6 reveal">
+            <h3 class="font-display text-lg md:text-xl text-ceac-blue mb-3">Luis Romo</h3>
+            <ul class="text-[11px] md:text-xs text-gray-700 leading-relaxed space-y-1.5 list-disc pl-4">
+              <li>Licenciado en Historia y Ciencias de la Música.</li>
+              <li>Diplomado en Magisterio, especialidad Musical y CFGS Informática.</li>
+              <li>Managing Director de Guest Music desde 2016, combinando dirección y docencia.</li>
+              <li>Experto en Rekordbox.</li>
+              <li>Docente especializado en programas musicales: secuenciadores, edición de sonido y editor de partituras.</li>
+              <li>Vicepresidente de la Asociación Musical del Prat (Barcelona) desde 2012.</li>
+              <li>Profesor de Lenguajes Musicales, Música e Informática en diversas escuelas de música de Barcelona.</li>
+              <li>Formación especializada en DJ en Sonopro.</li>
+            </ul>
           </article>
 
-          <!-- Cristina Bacci -->
-          <article class="bg-white rounded-2xl border border-gray-200 p-5 md:p-6 flex gap-4 md:gap-5 reveal">
-            <img src="assets/img/cristina-bacci.webp" alt="Cristina Bacci" class="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover flex-shrink-0" />
-            <div>
-              <h3 class="font-display text-lg md:text-xl text-ceac-blue mb-2">Cristina Bacci</h3>
-              <p class="text-[11px] md:text-xs text-gray-700 leading-relaxed">
-                Licenciada en Filología Inglesa por la Universidad Autónoma de Madrid. Máster en
-                Escritura Creativa por la UNIR. Programa de Escritura, Estilo y Creatividad por la
-                VIU. Más de 15 años dedicada a la enseñanza del inglés en todos los niveles y edades.
-              </p>
-            </div>
-          </article>
         </div>
       </div>
     </section>

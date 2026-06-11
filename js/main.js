@@ -117,7 +117,26 @@
     });
   }
 
-  /* ---------- 6. Carrusel de logos colaboradores (loop infinito con duplicado) ---------- */
+  /* ---------- 6. Vídeo docente: facade → iframe al pulsar ---------- */
+  const docenteBtn = document.getElementById('docenteVideo');
+  const docenteWrap = document.getElementById('docenteVideoWrap');
+  if (docenteBtn && docenteWrap) {
+    docenteBtn.addEventListener('click', () => {
+      const id = docenteBtn.dataset.yt;
+      if (!id) return;
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+      iframe.title = 'Vídeo de presentación de Luis Romo';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.className = 'absolute inset-0 w-full h-full border-0';
+      docenteWrap.innerHTML = '';
+      docenteWrap.appendChild(iframe);
+    });
+  }
+
+  /* ---------- 7. Carrusel de logos colaboradores (loop infinito con duplicado) ---------- */
   const logosTrack = document.getElementById('logosTrack');
   const logosPrev  = document.getElementById('logosPrev');
   const logosNext  = document.getElementById('logosNext');
